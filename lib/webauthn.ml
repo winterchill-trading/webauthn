@@ -10,3 +10,4 @@ module Client_data = Client_data
 module Verify_error = Verify_error
 module Challenge = Challenge
 module Credential = Credential
+module Response = Response
