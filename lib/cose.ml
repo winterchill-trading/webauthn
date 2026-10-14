@@ -80,7 +80,7 @@ let of_cbor item =
         let%map key = P256.public_key_of_coordinates ~x ~y in
         Es256 key))
   | kty, Some Rs256 when kty = kty_rsa ->
-    if List.exists (List.range (-12) (-2) ~stop:`inclusive) ~f:(fun l ->
+    if List.exists (List.range (-12) (-3) ~stop:`inclusive) ~f:(fun l ->
          Option.is_some (field l))
     then Or_error.error_string "COSE_Key: private RSA parameters present"
     else (
