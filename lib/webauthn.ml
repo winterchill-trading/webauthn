@@ -12,3 +12,5 @@ module Challenge = Challenge
 module Credential = Credential
 module Response = Response
 module Options = Options
+module Relying_party = Relying_party
+module Attestation = Attestation
