@@ -96,7 +96,7 @@ Level 3* (W3C Editor's Draft, 25 August 2026).
 
 - P-256 verification is written over zarith because the common OCaml elliptic-curve
   package cannot be built on the OxCaml switch. One verification with Jacobian
-  coordinates and Shamir's trick is about a millisecond.
+  coordinates and Shamir's trick takes about 0.7 ms on an Apple M-series laptop.
 - Cryptokit 1.16 `RSA.unwrap_signature` raises for moduli whose bit length is not a
   multiple of 8 (it sizes its output as `size / 8` bytes). The W3C RS256 example uses a
   3482-bit modulus, so verification uses `Z.powm` instead.
