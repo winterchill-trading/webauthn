@@ -14,3 +14,5 @@ module Response = Response
 module Options = Options
 module Relying_party = Relying_party
 module Attestation = Attestation
+module Registration = Registration
+module Authentication = Authentication
