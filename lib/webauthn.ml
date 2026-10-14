@@ -16,3 +16,5 @@ module Relying_party = Relying_party
 module Attestation = Attestation
 module Registration = Registration
 module Authentication = Authentication
+module Store = Store
+module Store_memory = Store_memory
