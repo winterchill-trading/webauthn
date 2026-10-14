@@ -1,0 +1,6 @@
+(library
+ (name webauthn)
+ (public_name webauthn)
+ (libraries core async_kernel yojson zarith cryptokit)
+ (preprocess
+  (pps ppx_jane)))
