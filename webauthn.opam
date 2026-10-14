@@ -17,6 +17,7 @@ depends: [
   "core" {>= "v0.18~preview.130.106+341" & < "v0.19~"}
   "core_unix" {>= "v0.18~preview.130.106+341" & < "v0.19~"}
   "async_kernel" {>= "v0.18~preview.130.106+341" & < "v0.19~"}
+  "async" {with-test & >= "v0.18~preview.130.106+341" & < "v0.19~"}
   "ppx_jane" {>= "v0.18~preview.130.106+341" & < "v0.19~"}
   "yojson" {>= "2.0.0"}
   "zarith" {>= "1.12"}

@@ -45,6 +45,11 @@
    (and
     (>= v0.18~preview.130.106+341)
     (< v0.19~)))
+  (async
+   (and
+    :with-test
+    (>= v0.18~preview.130.106+341)
+    (< v0.19~)))
   (ppx_jane
    (and
     (>= v0.18~preview.130.106+341)
