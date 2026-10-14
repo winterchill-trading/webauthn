@@ -1,6 +1,14 @@
 (library
  (name webauthn_test)
- (libraries core async_kernel webauthn yojson zarith cryptokit)
+ (libraries
+  core
+  async
+  async_kernel
+  webauthn
+  webauthn.testing
+  yojson
+  zarith
+  cryptokit)
  (inline_tests
   (deps
    (source_tree vectors))
