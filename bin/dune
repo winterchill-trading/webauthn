@@ -1,0 +1,12 @@
+(executable
+ (name main)
+ (public_name webauthn)
+ (package webauthn)
+ (libraries
+  core
+  core_unix.command_unix
+  core_unix.filename_unix
+  webauthn
+  yojson)
+ (preprocess
+  (pps ppx_jane)))
