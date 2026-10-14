@@ -1,0 +1,81 @@
+{
+ "authentications": [
+  {
+   "challenge": "bj4h96N0tALgSeDe9IbNACPAYjanqIEPVUasBJLdLkg",
+   "expected": {
+    "backed_up": false,
+    "new_sign_count": 1,
+    "user_verified": true
+   },
+   "response": {
+    "clientExtensionResults": {},
+    "id": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+    "rawId": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+    "response": {
+     "authenticatorData": "v6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LUFAAAAAQ",
+     "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiYmo0aDk2TjB0QUxnU2VEZTlJYk5BQ1BBWWphbnFJRVBWVWFzQkpMZExrZyIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+     "signature": "D8XBkzWxbUBVPsNJaSWGOHPh9AfHKVcOGMnj8Mx798l01axSIzdP44N2C0pG4GYFuox0yVU_u1bAQRf6-GSg9ubXVf79IW69ihTIns_IoZl_jCbYfAgZJ5L6to0Z-Mq0ZoSIfMOtIAO_5ASMl-tviV83Ks1WQeScVjFyKX0tg1XvC0-tv8Kg-GgoyNamUokS0uWwSnqW-M79U0hNyuALo6AjM9KsmZ7zO-bVFqZWC3O2N_I7g-ceQ_1ADBsR8MlS4ue-dsWlt8SM8uJ4gHxq0RetlHwDsgp5fZgdriHM-m3CCHPmehlOYPFnC06BhvboYz6X6pa4DT4290bbLAcXSg",
+     "userHandle": "EfgbT-MyWUEI1n6P_qci4g"
+    },
+    "type": "public-key"
+   }
+  },
+  {
+   "challenge": "4lJAIYngDUiwxXakuncn6FhCH7WJ_AooNtbafpZwUfQ",
+   "expected": {
+    "backed_up": false,
+    "new_sign_count": 2,
+    "user_verified": true
+   },
+   "response": {
+    "clientExtensionResults": {},
+    "id": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+    "rawId": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+    "response": {
+     "authenticatorData": "v6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LUFAAAAAg",
+     "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiNGxKQUlZbmdEVWl3eFhha3VuY242RmhDSDdXSl9Bb29OdGJhZnBad1VmUSIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+     "signature": "RCzLsH8jG8tPUy_q5WgUHggHiJnfoJQTxMtmKWU8wC_QBbrUVxbd_BgqjWXZcgjsQeaSa2US_i3zBquTJl0oPmyed-FtVyCbaAH529UplV5xQQRNAnzlpcQ6pI_QhntWM07S7HwYXZf50Yr2cvTS51Ks-WEO-45xSo0CuwUz0WhBG9xsh6hnarQsncNLvffGSnYf7sXEnrsQRiUptden41J32pXD3XojWNmW7zAD9qTBcMneZ--am_7XKsWWUNWp_dnGbNbnLGolopJGB4CePwJc9SDRqdK3eufrWwS5ypLdYvkiYS6FB1uq019pRN6EVI6CxeJ3yGqphw9nTLUjfg",
+     "userHandle": "EfgbT-MyWUEI1n6P_qci4g"
+    },
+    "type": "public-key"
+   }
+  }
+ ],
+ "generator": "scripts/gen_fixtures.py (py_webauthn 2.7.0, fido2 2.2.1, cryptography 50.0.2)",
+ "name": "rs256-none",
+ "origin": "https://example.org",
+ "registration": {
+  "challenge": "T8b5Vop1KZFSVWCT684qm79ztpZ2-ubXgETF8WGMaOM",
+  "expected": {
+   "aaguid": "00000000-0000-0000-0000-000000000000",
+   "backed_up": false,
+   "backup_eligible": false,
+   "credential_id": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+   "credential_public_key": "pAEDAzkBACBZAQCPzbdFJ2oiHSoUNu2ZWmmsV9c7RMc6moxni6Bp9OXj0SFn7ZDfMDtEFPY5-8h7n6Yfj48O2eBTcP1ZYiDyJ7cTeVFi89F_fpIxBMnWMX6OAf84Vh_7Tkro4WJUsp5zJTfjbfPRWrkt5_jft9Xj5Na3j9fJGdC5t_EMFCp6MHIgtO1IUm2wwFhnHkoEIl2_XITLMmABVCs7SS5Ubp0BOu-RCTQZ8U13g-f4f8YYbRh-YRykMlr-Dpjnt79T5WUduqZzBlw_LkrEi8IVq5GeeVNqwrof6XHiOclYk5VQr9eRTdmxCdEOxFYxTTRf51BDgTK-FLx4yaSTgNpyiW5VLNurIUMBAAE",
+   "fmt": "none",
+   "sign_count": 0,
+   "user_verified": true
+  },
+  "response": {
+   "authenticatorAttachment": "cross-platform",
+   "clientExtensionResults": {
+    "credProps": {
+     "rk": true
+    }
+   },
+   "id": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+   "rawId": "xvd8k_T6h7QxaU7ZJJXJ_09LztE",
+   "response": {
+    "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YVkBW7-rw3QylYsGM2DTrWRhycRzWuf47dRlkqXg8BRSsuS1RQAAAAAAAAAAAAAAAAAAAAAAAAAAABTG93yT9PqHtDFpTtkklcn_T0vO0aQBAwM5AQAgWQEAj823RSdqIh0qFDbtmVpprFfXO0THOpqMZ4ugafTl49EhZ-2Q3zA7RBT2OfvIe5-mH4-PDtngU3D9WWIg8ie3E3lRYvPRf36SMQTJ1jF-jgH_OFYf-05K6OFiVLKecyU3423z0Vq5Lef437fV4-TWt4_XyRnQubfxDBQqejByILTtSFJtsMBYZx5KBCJdv1yEyzJgAVQrO0kuVG6dATrvkQk0GfFNd4Pn-H_GGG0YfmEcpDJa_g6Y57e_U-VlHbqmcwZcPy5KxIvCFauRnnlTasK6H-lx4jnJWJOVUK_XkU3ZsQnRDsRWMU00X-dQQ4EyvhS8eMmkk4DacoluVSzbqyFDAQAB",
+    "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiVDhiNVZvcDFLWkZTVldDVDY4NHFtNzl6dHBaMi11YlhnRVRGOFdHTWFPTSIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+    "transports": [
+     "usb",
+     "nfc"
+    ]
+   },
+   "type": "public-key"
+  }
+ },
+ "rp_id": "example.org",
+ "user_handle": "EfgbT-MyWUEI1n6P_qci4g"
+}

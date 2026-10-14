@@ -1,0 +1,81 @@
+{
+ "authentications": [
+  {
+   "challenge": "BOpCYCx7O0lQSJxfZ3vTp5PhJ2GCrUVG75nbE3JkVZo",
+   "expected": {
+    "backed_up": true,
+    "new_sign_count": 0,
+    "user_verified": true
+   },
+   "response": {
+    "clientExtensionResults": {},
+    "id": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+    "rawId": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+    "response": {
+     "authenticatorData": "v6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LUdAAAAAA",
+     "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiQk9wQ1lDeDdPMGxRU0p4ZlozdlRwNVBoSjJHQ3JVVkc3NW5iRTNKa1ZabyIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+     "signature": "MEUCIQCnOSEs052i1iGO1uC7yJWbfQKmsc5tDq_UyhgkAQ9U5QIgaMFDepfz-LIcslps_wEI6QbKI332YNaV5aQhwi81oGU",
+     "userHandle": "tJxc1Kkfr4RRoDq_ajSTpw"
+    },
+    "type": "public-key"
+   }
+  },
+  {
+   "challenge": "LH6LakzDLiav3-w30BMBErKnd_dRlIG6BBZumCj17Mc",
+   "expected": {
+    "backed_up": false,
+    "new_sign_count": 0,
+    "user_verified": true
+   },
+   "response": {
+    "clientExtensionResults": {},
+    "id": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+    "rawId": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+    "response": {
+     "authenticatorData": "v6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LUNAAAAAA",
+     "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiTEg2TGFrekRMaWF2My13MzBCTUJFcktuZF9kUmxJRzZCQlp1bUNqMTdNYyIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+     "signature": "MEYCIQDoziGGcIewZ8AuRwawMTWZwkb2VMBd4HsKQG2cXgcJFwIhAOcH_kCQgWVSpQQhFDBL2i5R4bYs6x3EUG-9No1uWGqn",
+     "userHandle": "tJxc1Kkfr4RRoDq_ajSTpw"
+    },
+    "type": "public-key"
+   }
+  }
+ ],
+ "generator": "scripts/gen_fixtures.py (py_webauthn 2.7.0, fido2 2.2.1, cryptography 50.0.2)",
+ "name": "es256-none-passkey",
+ "origin": "https://example.org",
+ "registration": {
+  "challenge": "Lb0L-nDSleuTMhB6ajAN4RTcQk9CLRWc6dHXfmbGD0c",
+  "expected": {
+   "aaguid": "00000000-0000-0000-0000-000000000000",
+   "backed_up": true,
+   "backup_eligible": true,
+   "credential_id": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+   "credential_public_key": "pQECAyYgASFYIPOJGfDFxrfOMjj7NCnxVit1k-YN40rcyZh4oq077BsFIlggV0J22oKVGI5gKwXxmSI7qaIC5hO5Km5ogosc-ZHNak0",
+   "fmt": "none",
+   "sign_count": 0,
+   "user_verified": true
+  },
+  "response": {
+   "authenticatorAttachment": "platform",
+   "clientExtensionResults": {
+    "credProps": {
+     "rk": true
+    }
+   },
+   "id": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+   "rawId": "K2EtTMtx-_XpzXz4RvO0rzpoLrs",
+   "response": {
+    "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViYv6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LVdAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCthLUzLcfv16c18-EbztK86aC67pQECAyYgASFYIPOJGfDFxrfOMjj7NCnxVit1k-YN40rcyZh4oq077BsFIlggV0J22oKVGI5gKwXxmSI7qaIC5hO5Km5ogosc-ZHNak0",
+    "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiTGIwTC1uRFNsZXVUTWhCNmFqQU40UlRjUWs5Q0xSV2M2ZEhYZm1iR0QwYyIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+    "transports": [
+     "internal",
+     "hybrid"
+    ]
+   },
+   "type": "public-key"
+  }
+ },
+ "rp_id": "example.org",
+ "user_handle": "tJxc1Kkfr4RRoDq_ajSTpw"
+}

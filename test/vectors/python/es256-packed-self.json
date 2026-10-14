@@ -1,0 +1,61 @@
+{
+ "authentications": [
+  {
+   "challenge": "bB7A6myvplGvYmRQ_9b0yWDTyPJZmigdrsdN5hXplgE",
+   "expected": {
+    "backed_up": false,
+    "new_sign_count": 1,
+    "user_verified": true
+   },
+   "response": {
+    "clientExtensionResults": {},
+    "id": "2cm390snteJPWh1XEyvWmfTQOr8",
+    "rawId": "2cm390snteJPWh1XEyvWmfTQOr8",
+    "response": {
+     "authenticatorData": "v6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LUFAAAAAQ",
+     "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiYkI3QTZteXZwbEd2WW1SUV85YjB5V0RUeVBKWm1pZ2Ryc2RONWhYcGxnRSIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+     "signature": "MEUCIQDZCvW98Otgm6bDfZy1Ejn3SjlF3mompEGixEtj8cTvvwIgFjlCpNIsnsoC09ruzXJ1Ir1Y4Yk6WFesBwzV5sSpBfQ",
+     "userHandle": "7Nho23h4kZMSVvcF8E_dZg"
+    },
+    "type": "public-key"
+   }
+  }
+ ],
+ "generator": "scripts/gen_fixtures.py (py_webauthn 2.7.0, fido2 2.2.1, cryptography 50.0.2)",
+ "name": "es256-packed-self",
+ "origin": "https://example.org",
+ "registration": {
+  "challenge": "T-XKdbo2jPikyag9avBe2dOO5C_xyozawxGD-E5s65w",
+  "expected": {
+   "aaguid": "4e69c922-a051-0742-7362-52d073e04f69",
+   "backed_up": false,
+   "backup_eligible": false,
+   "credential_id": "2cm390snteJPWh1XEyvWmfTQOr8",
+   "credential_public_key": "pQECAyYgASFYINw_HW0zgUAKM6p9IWaoI5Am1ZeLRO1ZAhtz7XRk9FSDIlgg7boyjPQr0su3cuZfFbfloTagFhWF51UrNglDHl8id9M",
+   "fmt": "packed",
+   "sign_count": 0,
+   "user_verified": true
+  },
+  "response": {
+   "authenticatorAttachment": "cross-platform",
+   "clientExtensionResults": {
+    "credProps": {
+     "rk": true
+    }
+   },
+   "id": "2cm390snteJPWh1XEyvWmfTQOr8",
+   "rawId": "2cm390snteJPWh1XEyvWmfTQOr8",
+   "response": {
+    "attestationObject": "o2NmbXRmcGFja2VkZ2F0dFN0bXSiY2FsZyZjc2lnWEYwRAIgBy4OtWqqPYjU2ycW7sQ1lkaJd8SHcrimuqy5RDEwOyYCIG26br75lH7c8hR00QO-3YsNFQvNCJ2Pg4Zf1sL2bDRTaGF1dGhEYXRhWJi_q8N0MpWLBjNg061kYcnEc1rn-O3UZZKl4PAUUrLktUUAAAAATmnJIqBRB0JzYlLQc-BPaQAU2cm390snteJPWh1XEyvWmfTQOr-lAQIDJiABIVgg3D8dbTOBQAozqn0hZqgjkCbVl4tE7VkCG3PtdGT0VIMiWCDtujKM9CvSy7dy5l8Vt-WhNqAWFYXnVSs2CUMeXyJ30w",
+    "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiVC1YS2RibzJqUGlreWFnOWF2QmUyZE9PNUNfeHlvemF3eEdELUU1czY1dyIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+    "transports": [
+     "usb",
+     "nfc"
+    ]
+   },
+   "type": "public-key"
+  }
+ },
+ "rp_id": "example.org",
+ "user_handle": "7Nho23h4kZMSVvcF8E_dZg"
+}
