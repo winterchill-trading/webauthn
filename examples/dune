@@ -1,8 +1,8 @@
 ; Examples are built with the rest of the project (and so in CI) but not installed.
 ; Their output is checked by the runtest alias.
 
-(executable
- (name passkey_flow)
+(executables
+ (names passkey_flow quick_start)
  (libraries core async webauthn webauthn.testing yojson)
  (preprocess
   (pps ppx_jane)))
