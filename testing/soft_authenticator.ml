@@ -35,7 +35,17 @@ let create
       Ec secret, Cose.Es256 (P256.Testing_only.public_key ~secret)
     | Rs256 ->
       let rng = Cryptokit.Random.pseudo_rng (sha256 ("rs256 key " ^ seed)) in
-      let key = Cryptokit.RSA.new_key ~rng ~e:65537 2048 in
+      (* Cryptokit's [new_key 2048] multiplies two 1024-bit primes, which can give a
+         2047-bit modulus; draw again until the modulus has the full size. *)
+      let rec draw () =
+        let key = Cryptokit.RSA.new_key ~rng ~e:65537 2048 in
+        let top = Char.to_int (String.lstrip key.n ~drop:(Char.equal '\x00')).[0] in
+        if String.length (String.lstrip key.n ~drop:(Char.equal '\x00')) = 256
+           && top >= 0x80
+        then key
+        else draw ()
+      in
+      let key = draw () in
       let public_key =
         Rsa.public_key ~n:key.n ~e:key.e |> Or_error.ok_exn |> fun k -> Cose.Rs256 k
       in
