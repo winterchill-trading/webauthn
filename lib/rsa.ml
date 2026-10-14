@@ -50,26 +50,25 @@ let verify t ~message ~signature =
   if String.length signature <> k || Z.geq (z_of_bytes signature) (z_of_bytes t.n)
   then false
   else (
-    let key =
-      { Cryptokit.RSA.size = t.bits
-      ; n = t.n
-      ; e = t.e
-      ; d = ""
-      ; p = ""
-      ; q = ""
-      ; dp = ""
-      ; dq = ""
-      ; qinv = ""
-      }
-    in
-    match Cryptokit.RSA.unwrap_signature key signature with
+    (* Plain modular exponentiation over zarith. Cryptokit 1.16's [RSA.unwrap_signature]
+       sizes its output as [size / 8] bytes and raises for a modulus whose bit length is
+       not a multiple of 8 (the 3482-bit key of the W3C RS256 example needs 436 bytes, it
+       allocates 435). *)
+    match Z.powm (z_of_bytes signature) (z_of_bytes t.e) (z_of_bytes t.n) with
     | exception _ -> false
     | em ->
       let em =
-        (* Cryptokit returns the integer padded to the key size; normalise to k bytes. *)
-        if String.length em >= k
-        then String.suffix em k
-        else String.make (k - String.length em) '\x00' ^ em
+        let hex = Z.format "%x" em in
+        let hex = if String.length hex % 2 = 1 then "0" ^ hex else hex in
+        let raw =
+          String.init
+            (String.length hex / 2)
+            ~f:(fun i ->
+              Char.of_int_exn (Int.of_string ("0x" ^ String.sub hex ~pos:(2 * i) ~len:2)))
+        in
+        if String.length raw > k
+        then raw
+        else String.make (k - String.length raw) '\x00' ^ raw
       in
       let t_ =
         sha256_digest_info_prefix

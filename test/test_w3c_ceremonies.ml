@@ -103,7 +103,7 @@ let%expect_test "every W3C example, both attestation policies, then the assertio
     packed-es256                   strict=unsupported_attestation  lenient=ok                     (Unverified packed)      assertion=Not_used
     packed-es384                   strict=unsupported_algorithm    lenient=unsupported_algorithm  -                        assertion=-
     packed-es512                   strict=unsupported_algorithm    lenient=unsupported_algorithm  -                        assertion=-
-    packed-rs256                   strict=unsupported_attestation  lenient=ok                     (Unverified packed)      assertion=bad_signature
+    packed-rs256                   strict=unsupported_attestation  lenient=ok                     (Unverified packed)      assertion=Not_used
     packed-eddsa                   strict=unsupported_algorithm    lenient=unsupported_algorithm  -                        assertion=-
     packed-ed448                   strict=unsupported_algorithm    lenient=unsupported_algorithm  -                        assertion=-
     tpm-es256                      strict=unsupported_attestation  lenient=ok                     (Unverified tpm)         assertion=Not_used

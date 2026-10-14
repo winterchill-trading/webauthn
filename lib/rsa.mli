@@ -1,7 +1,8 @@
 (** RSASSA-PKCS1-v1_5 signature verification with SHA-256: the COSE algorithm RS256
-    (-257), used by Windows Hello and some security keys. The modular exponentiation is
-    Cryptokit's; the padding check compares the whole decoded block against the one
-    expected encoding, which avoids the classic lenient-parser forgeries. *)
+    (-257), used by Windows Hello and some security keys. The padding check compares the
+    whole decoded block against the one expected encoding, which avoids the classic
+    lenient-parser forgeries. Moduli of any bit length are handled, including ones that
+    are not a multiple of 8 bits. *)
 
 open! Core
 
