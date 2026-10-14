@@ -5,3 +5,4 @@ module Cbor = Cbor
 module P256 = P256
 module Rsa = Rsa
 module Cose = Cose
+module Authenticator_data = Authenticator_data
