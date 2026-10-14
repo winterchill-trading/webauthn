@@ -7,7 +7,17 @@ type t =
   ; cross_origin : bool
   ; top_origin : string option
   }
-[@@deriving sexp, compare, equal]
+[@@deriving compare, equal]
+
+let sexp_of_t { type_; challenge; origin; cross_origin; top_origin } =
+  [%sexp
+    { type_ : string
+    ; challenge : string = Base64url.encode challenge
+    ; origin : string
+    ; cross_origin : bool
+    ; top_origin : string option
+    }]
+;;
 
 let parse raw =
   let open Or_error.Let_syntax in

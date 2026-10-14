@@ -11,7 +11,10 @@ type t =
   ; cross_origin : bool (** [false] when absent. *)
   ; top_origin : string option
   }
-[@@deriving sexp, compare, equal]
+[@@deriving compare, equal]
+
+(** The challenge is shown in base64url, as it appears in the JSON. *)
+val sexp_of_t : t -> Sexp.t
 
 (** [parse json] reads clientDataJSON. It requires a JSON object with string [type],
     base64url [challenge] and string [origin]; [crossOrigin] must be a boolean and
