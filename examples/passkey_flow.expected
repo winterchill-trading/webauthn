@@ -1,0 +1,54 @@
+creation options:
+{
+  "rp": { "id": "example.org", "name": "Example" },
+  "user": {
+    "id": "dXNlci0wMDAx",
+    "name": "alice@example.org",
+    "displayName": "Alice"
+  },
+  "challenge": "YWhvdn2Ei5KZoKeutbzDytHY3-bt9PsCCRAXHiUsMzo",
+  "pubKeyCredParams": [
+    { "type": "public-key", "alg": -7 },
+    { "type": "public-key", "alg": -257 }
+  ],
+  "timeout": 300000,
+  "excludeCredentials": [],
+  "authenticatorSelection": {
+    "residentKey": "required",
+    "requireResidentKey": true,
+    "userVerification": "preferred"
+  },
+  "attestation": "none",
+  "extensions": { "credProps": true }
+}
+
+registered P6sh9eHNVsmP_mfnbNa2VQ, attestation None_, store: added
+
+((id P6sh9eHNVsmP_mfnbNa2VQ)
+ (public_key
+  pQECAyYgASFYIKrra0AgQIZARcKJsy5jhrwf3MTYh-2_oukWtRYz4Op3Ilgg7pAVt4o1TDpOIMZcgUPSjcJum8J2P-rNFvXquNE7joI)
+ (sign_count 0) (user_handle dXNlci0wMDAx)
+ (aaguid 00000000-0000-0000-0000-000000000000) (transports (Internal))
+ (backup_eligible true) (backed_up true) (user_verified true)
+ (attestation_format none))
+
+request options:
+{
+  "challenge": "Ymlwd36FjJOaoaivtr3Ey9LZ4Ofu9fwDChEYHyYtNDs",
+  "timeout": 300000,
+  "rpId": "example.org",
+  "allowCredentials": [],
+  "userVerification": "required"
+}
+
+signed in as user-0001, counter 1 (Advanced), store update: updated
+request options:
+{
+  "challenge": "Ymlwd36FjJOaoaivtr3Ey9LZ4Ofu9fwDChEYHyYtNDs",
+  "timeout": 300000,
+  "rpId": "example.org",
+  "allowCredentials": [],
+  "userVerification": "required"
+}
+
+signed in as user-0001, counter 2 (Advanced), store update: updated
