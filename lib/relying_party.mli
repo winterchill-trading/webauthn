@@ -3,6 +3,7 @@
 
 open! Core
 
+(** An RP ID with its allowed origins and top origins. *)
 type t [@@deriving sexp_of]
 
 (** [create ~id ~origins ()]: [id] is the RP ID (a registrable domain such as
@@ -25,8 +26,11 @@ val create
   -> t Or_error.t
 
 val id : t -> string
+(** The RP ID. *)
 val origins : t -> string list
+(** Origins allowed in clientDataJSON. *)
 val top_origins : t -> string list
+(** Top origins allowed for cross-origin iframes; empty refuses them. *)
 
 (** SHA-256 of the RP ID, as authenticator data carries it. *)
 val id_hash : t -> string

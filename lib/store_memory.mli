@@ -4,6 +4,7 @@
 open! Core
 include Store.S
 
+(** An empty store. *)
 val create : unit -> t
 
 (** Number of stored credentials. *)

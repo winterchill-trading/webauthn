@@ -6,6 +6,7 @@
 
 open! Core
 
+(** An RSA public key of at least {!min_modulus_bits} bits. *)
 type public_key [@@deriving sexp_of, compare, equal]
 
 (** Smallest accepted modulus: 2048 bits. *)

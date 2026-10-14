@@ -21,11 +21,13 @@ module Algorithm : sig
   val name_of_int : int -> string
 end
 
+(** A public key this library can verify signatures with. *)
 type t =
   | Es256 of P256.public_key
   | Rs256 of Rsa.public_key
 [@@deriving sexp_of, compare, equal]
 
+(** The key's algorithm. *)
 val algorithm : t -> Algorithm.t
 
 (** [of_cbor item] reads a COSE_Key map. It requires the key type (label 1), the algorithm
@@ -43,6 +45,7 @@ val decode : string -> t Or_error.t
     [decode (encode t)] is [Ok t]. *)
 val to_cbor : t -> Cbor.t
 
+(** The deterministic CBOR encoding of {!to_cbor}. *)
 val encode : t -> string
 
 (** [verify key ~message ~signature] checks a WebAuthn signature: DER ECDSA for ES256,
@@ -52,7 +55,9 @@ val verify : t -> message:string -> signature:string -> bool
 (** Stable serialisation: the key travels as its COSE encoding, so the format does not
     depend on this library's internal representation. *)
 module Stable : sig
+  (** Version 1. *)
   module V1 : sig
+    (** Same type as {!Cose.t}; base64url COSE bytes in sexps. *)
     type nonrec t = t [@@deriving sexp, bin_io, compare, equal]
   end
 end

@@ -18,6 +18,7 @@ module User_verification : sig
 
   (** ["required"], ["preferred"], ["discouraged"]. *)
   val to_string : t -> string
+  (** The WebAuthn enumeration string. *)
 end
 
 module Resident_key : sig
@@ -30,6 +31,7 @@ module Resident_key : sig
   [@@deriving sexp, compare, equal, enumerate]
 
   val to_string : t -> string
+  (** The WebAuthn enumeration string. *)
 end
 
 module Attestation_conveyance : sig
@@ -41,6 +43,7 @@ module Attestation_conveyance : sig
   [@@deriving sexp, compare, equal, enumerate]
 
   val to_string : t -> string
+  (** The WebAuthn enumeration string. *)
 end
 
 module Authenticator_attachment : sig
@@ -50,6 +53,7 @@ module Authenticator_attachment : sig
   [@@deriving sexp, compare, equal, enumerate]
 
   val to_string : t -> string
+  (** The WebAuthn enumeration string. *)
 end
 
 module Hint : sig
@@ -61,6 +65,7 @@ module Hint : sig
   [@@deriving sexp, compare, equal, enumerate]
 
   val to_string : t -> string
+  (** The WebAuthn enumeration string. *)
 end
 
 module Descriptor : sig
@@ -72,7 +77,9 @@ module Descriptor : sig
   [@@deriving sexp, compare, equal]
 
   val of_credential : Credential.t -> t
+  (** The ID and transports of a stored credential. *)
   val to_json : t -> Yojson.Safe.t
+  (** [{"type": "public-key", "id": ..., "transports": [...]}]. *)
 end
 
 module Creation : sig
@@ -121,6 +128,7 @@ module Creation : sig
   (** [PublicKeyCredentialCreationOptionsJSON]. [requireResidentKey] is set from
       [resident_key] for Level 1 browsers. *)
   val to_json : t -> Yojson.Safe.t
+  (** [{"type": "public-key", "id": ..., "transports": [...]}]. *)
 end
 
 module Request : sig
@@ -148,4 +156,5 @@ module Request : sig
 
   (** [PublicKeyCredentialRequestOptionsJSON]. *)
   val to_json : t -> Yojson.Safe.t
+  (** [{"type": "public-key", "id": ..., "transports": [...]}]. *)
 end

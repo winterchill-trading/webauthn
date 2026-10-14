@@ -22,7 +22,9 @@ module Registration : sig
   val of_json : Yojson.Safe.t -> t Or_error.t
 
   val of_string : string -> t Or_error.t
+  (** [of_json] over JSON text. *)
   val to_json : t -> Yojson.Safe.t
+  (** The JSON shape {!of_json} reads; used by test authenticators and tools. *)
 end
 
 module Authentication : sig
@@ -39,6 +41,10 @@ module Authentication : sig
   [@@deriving sexp_of]
 
   val of_json : Yojson.Safe.t -> t Or_error.t
+  (** [of_json json] reads [AuthenticationResponseJSON]. [type] must be
+      ["public-key"] and [id] must equal the base64url form of [rawId]. *)
   val of_string : string -> t Or_error.t
+  (** [of_json] over JSON text. *)
   val to_json : t -> Yojson.Safe.t
+  (** The JSON shape {!of_json} reads; used by test authenticators and tools. *)
 end

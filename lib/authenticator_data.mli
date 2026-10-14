@@ -18,6 +18,7 @@ module Flags : sig
   val of_byte : int -> t
 
   val to_byte : t -> int
+  (** The flags byte; reserved bits are written as 0. *)
 end
 
 module Aaguid : sig
@@ -26,21 +27,29 @@ module Aaguid : sig
   type t [@@deriving sexp, compare, equal, hash, bin_io]
 
   val of_bytes : string -> t Or_error.t
+  (** Errors unless the input is exactly 16 bytes. *)
   val to_bytes : t -> string
+  (** The 16 raw bytes. *)
   val zero : t
+  (** All zeros: no model information. *)
 
   (** Lowercase UUID text, e.g. ["adce0002-35bc-c60a-648b-0b25f1f05503"]. *)
   val to_string : t -> string
 
   val of_string : string -> t Or_error.t
+  (** Reads the UUID text form written by {!to_string}. *)
 
+  (** Stable serialisation: the 16 bytes; UUID text in sexps. *)
   module Stable : sig
+    (** Version 1. *)
     module V1 : sig
       type nonrec t = t [@@deriving sexp, bin_io, compare, equal]
+      (** Same type as {!Aaguid.t}. *)
     end
   end
 end
 
+(** The new credential carried by registration authenticator data. *)
 type attested_credential =
   { aaguid : Aaguid.t
   ; credential_id : string

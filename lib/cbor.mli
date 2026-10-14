@@ -62,10 +62,15 @@ val diagnostic : t -> string
 val find : (t * t) list -> t -> t option
 
 val to_int : t -> int Or_error.t
+(** [to_int (Int n)] is [Ok n]. *)
 val to_bytes : t -> string Or_error.t
+(** [to_bytes (Bytes b)] is [Ok b]. *)
 val to_text : t -> string Or_error.t
+(** [to_text (Text s)] is [Ok s]. *)
 val to_map : t -> (t * t) list Or_error.t
+(** [to_map (Map entries)] is [Ok entries]. *)
 val to_array : t -> t list Or_error.t
+(** [to_array (Array items)] is [Ok items]. *)
 
 (** [kind t] names the item's type for error messages: ["int"], ["bytes"], ["map"]... *)
 val kind : t -> string

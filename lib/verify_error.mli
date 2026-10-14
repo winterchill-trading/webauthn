@@ -45,4 +45,5 @@ val code : t -> string
 (** All codes, for documentation and API schemas. *)
 val all_codes : string list
 
+(** An [Error.t] carrying the code and the case, for logs. *)
 val to_error : t -> Error.t

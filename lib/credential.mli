@@ -22,6 +22,7 @@ module Transport : sig
       ["internal"], or the [Other] text. *)
   val to_string : t -> string
 
+  (** Inverse of {!to_string}; unknown strings become [Other]. *)
   val of_string : string -> t
 end
 
@@ -41,7 +42,9 @@ type t =
 
 (** Stable serialisation for stores. Byte strings are base64url in the sexp form. *)
 module Stable : sig
+  (** Version 1. *)
   module V1 : sig
+    (** Same type as {!Credential.t}. *)
     type nonrec t = t [@@deriving sexp, bin_io, compare, equal]
   end
 end

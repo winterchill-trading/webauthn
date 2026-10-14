@@ -8,6 +8,7 @@
 open! Core
 open Webauthn
 
+(** One credential with its private key and signature counter. *)
 type t
 
 (** [create ~seed ()] derives the key and the credential ID from [seed], so the same seed
@@ -25,7 +26,9 @@ val create
   -> t
 
 val credential_id : t -> string
+(** The credential ID it registers and asserts with. *)
 val public_key : t -> Cose.t
+(** The credential public key. *)
 
 (** Current value of the signature counter (the last one signed). *)
 val sign_count : t -> int
