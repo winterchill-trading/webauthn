@@ -1,0 +1,19 @@
+{
+ "authenticatorAttachment": "cross-platform",
+ "clientExtensionResults": {
+  "credProps": {
+   "rk": true
+  }
+ },
+ "id": "d-2maPazHmHlg8hh6p8xPfR8i2Y",
+ "rawId": "d-2maPazHmHlg8hh6p8xPfR8i2Y",
+ "response": {
+  "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViYv6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LVFAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHftpmj2sx5h5YPIYeqfMT30fItmpQECAyYgASFYIHl2dN5rL9C8b4UDoKmmBdk8qp2I_tPEcITximdKqA8xIlggmGD2f_I85Cec7QyI6ume7Ip-DTJ1HcaF6Ge3W3nYSWg",
+  "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiaW5IUU9fcVg5UXItZkRILVZfNnNMQ1Y2Wk84eUNBUXd4QzR2TWttRnVHOCIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+  "transports": [
+   "usb",
+   "nfc"
+  ]
+ },
+ "type": "public-key"
+}

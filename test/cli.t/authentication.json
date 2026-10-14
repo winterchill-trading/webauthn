@@ -1,0 +1,12 @@
+{
+ "clientExtensionResults": {},
+ "id": "d-2maPazHmHlg8hh6p8xPfR8i2Y",
+ "rawId": "d-2maPazHmHlg8hh6p8xPfR8i2Y",
+ "response": {
+  "authenticatorData": "v6vDdDKViwYzYNOtZGHJxHNa5_jt1GWSpeDwFFKy5LUFAAAAAQ",
+  "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiaTFVN2dES0dOTEJjNzliODJqYnBGMmdVRm9zN0dqN3lCQVpCcFM1UXYxayIsIm9yaWdpbiI6Imh0dHBzOi8vZXhhbXBsZS5vcmciLCJjcm9zc09yaWdpbiI6ZmFsc2V9",
+  "signature": "MEUCIAnmHu1rI0Om67ZubsIIKoorSFB_DWdQvyXANAHritSrAiEA5QDRvlK-w5iYQlzj7uMEMxo7RO4_VTT9lCrS4po2DrY",
+  "userHandle": "B58OvKCuA5tEZkbRmBLFEQ"
+ },
+ "type": "public-key"
+}
