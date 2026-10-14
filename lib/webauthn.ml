@@ -11,3 +11,4 @@ module Verify_error = Verify_error
 module Challenge = Challenge
 module Credential = Credential
 module Response = Response
+module Options = Options
