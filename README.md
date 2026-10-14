@@ -157,6 +157,8 @@ dune build @all @runtest
 dune build @examples/runtest
 ```
 
+Agent guide: `AGENTS.md`.
+
 Test data: `test/vectors/w3c` (W3C Level 3 section 16), `test/vectors/wycheproof`
 (Project Wycheproof, Apache 2.0), `test/vectors/python` (generated here and checked by
 py_webauthn), `test/vectors/py_webauthn` (recorded responses from py_webauthn's test
